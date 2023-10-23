@@ -4,8 +4,9 @@ const {
   checkAuthenticated,
   checkNotAuthenticated,
 } = require("../db/db-functions");
-const { getTree } = require("../controllers/tree");
+const { getTree, getTable } = require("../controllers/tree");
 
 router.route("/").get(checkAuthenticated, getTree);
+router.route("/table").get(checkAuthenticated, getTable);
 
 module.exports = router;

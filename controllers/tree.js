@@ -1,4 +1,3 @@
-const FamilyTree = require("./FamilyTree");
 const { Member } = require("../db/models");
 
 const getTree = async (req, res) => {
@@ -7,4 +6,10 @@ const getTree = async (req, res) => {
   res.render("tree/index.ejs", { allMembers });
 };
 
-module.exports = { getTree };
+const getTable = async (req, res) => {
+  const allMembers = await Member.findAll();
+
+  res.render("tree/table.ejs", { allMembers });
+};
+
+module.exports = { getTree, getTable };

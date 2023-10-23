@@ -1,0 +1,53 @@
+<%- include('partials/header') %>
+
+<a class="btn btn-dark" href="/" role="button" style="position: absolute">
+  HOME
+</a>
+<div class="container" style="margin-top: 20px">
+  <div class="row">
+    <div class="col">
+      <table class="table table-primary table-striped table-hover">
+        <thead>
+          <tr class="table-dark">
+            <th>id</th>
+            <th>father id</th>
+            <th>mother id</th>
+            <th>partner id</th>
+            <th>name</th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th>gender</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% allMembers.forEach(function(member, i) { %>
+          <tr key="<%= member.id %>">
+            <td><%= member.id %></td>
+            <td><%= member.fid %></td>
+            <td><%= member.mid %></td>
+            <td><%= member.pids %></td>
+            <td><%= member.name %></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><%= member.gender %></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

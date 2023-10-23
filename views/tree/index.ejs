@@ -1,14 +1,8 @@
-<html>
-  <head>
-    <title>شجره نامه</title>
-    <link href="/tree/css/css.css" rel="stylesheet" />
-    <link href="/tree/css/style.css" rel="stylesheet" />
-  </head>
+<%- include('partials/header') %>
 
-  <body>
-    <div id="tree" m="<%= JSON.stringify(allMembers) %>"></div>
+<div id="tree" m="<%= JSON.stringify(allMembers) %>"></div>
 
-    <script src="/tree/js/FamilyTree.js"></script>
-    <script src="/tree/js/chart.js"></script>
-  </body>
-</html>
+<script src="/tree/js/FamilyTree.js"></script>
+<script src="/tree/js/chart.js"></script>
+
+<%- include('partials/footer') %>
