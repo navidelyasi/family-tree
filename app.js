@@ -11,7 +11,6 @@ const auths = require("./routes/auth");
 const tree = require("./routes/tree");
 const sequelizeDB = require("./db/db-init");
 const { User, Member } = require("./db/models");
-
 const initPassport = require("./passport-config");
 
 // __________________________________________________________________
