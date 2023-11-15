@@ -4,6 +4,7 @@ if (process.env.NODE_ENV !== "production") {
 
 const express = require("express");
 const app = express();
+const cors = require("cors");
 const passport = require("passport");
 const flash = require("express-flash");
 const session = require("express-session");
@@ -26,6 +27,7 @@ app.set("view-engine", "ejs");
 app.use(express.static(__dirname + "/views"));
 app.use(express.urlencoded({ extended: false }));
 app.use(flash());
+app.use(cors());
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
